@@ -4,11 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use DateTime;
-use App\Models\Post;
+use App\Models\Pattern;
 
-class PostSeeder extends Seeder
+class PatternSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +15,6 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        Post::factory()->count(10)->create();
+        Pattern::factory()->count(10)->create();
     }
-
 }

@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('crochet', function (Blueprint $table) {
+        Schema::create('main_images', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 50);
-            $table->string('body', 200);
+            $table->foreignId('main_id')->constrained()->onDelete('cascade');
+            $table->string('image_url');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('crochet');
+        Schema::dropIfExists('image_url');
     }
 };
