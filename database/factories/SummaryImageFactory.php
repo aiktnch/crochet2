@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Main>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\MainImage>
  */
-class MainFactory extends Factory
+class SummaryImageFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,8 @@ class MainFactory extends Factory
     public function definition()
     {
         return [
-            'post_id' => 1,
-            'body' => fake()->text,
+            'summary_id' => 1,
+            'image_url' => $this->faker->url(),
         ];
     }
 }

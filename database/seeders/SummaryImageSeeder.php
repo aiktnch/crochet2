@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Main;
+use App\Models\SummaryImage;
 
-class MainSeeder extends Seeder
+class SummaryImageSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,6 @@ class MainSeeder extends Seeder
      */
     public function run()
     {
-        Main::factory()->count(10)->create();
+        SummaryImage::factory()->count(10)->create();
     }
 }
