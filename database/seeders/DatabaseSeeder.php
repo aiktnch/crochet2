@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CommentSeeder::class);
         $this->call(BookmarkSeeder::class);
         $this->call(LikeSeeder::class);
-        $this->call(MainSeeder::class);
-        $this->call(MainImageSeeder::class);
+        $this->call(SummarySeeder::class);
+        $this->call(SummaryImageSeeder::class);
         $this->call(IngredientSeeder::class);
         $this->call(IngredientImageSeeder::class);
         $this->call(PatternSeeder::class);
