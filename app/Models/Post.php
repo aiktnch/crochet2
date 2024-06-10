@@ -16,7 +16,7 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
     public function summary() {
-        return $this->belongsTo(Summary::class);
+        return $this->hasOne(Summary::class, 'post_id', 'id');
     }
     public function ingredient() {
         return $this->belongsTo(Ingredient::class);

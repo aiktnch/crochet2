@@ -16,4 +16,5 @@ class PatternImage extends Model
      protected $fillable = [
         'pattern_id',
         'image_url'
+    ];
 }

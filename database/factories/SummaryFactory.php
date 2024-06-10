@@ -16,9 +16,11 @@ class SummaryFactory extends Factory
      */
     public function definition()
     {
+        static $i = 1;
         return [
-            'post_id' => 1,
+            'post_id' => $i++,
             'body' => fake()->text,
         ];
     }
+    
 }

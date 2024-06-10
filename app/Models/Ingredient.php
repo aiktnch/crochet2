@@ -20,4 +20,5 @@ class Ingredient extends Model
      protected $fillable = [
         'post_id',
         'body'
+    ];
 }
