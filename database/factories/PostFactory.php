@@ -20,7 +20,6 @@ class PostFactory extends Factory
     {
         return [
             'title' => fake()->word,
-            'body' => fake()->text,
             'category_id' => 1,
             'user_id' => 1,
             'created_at' => now(),

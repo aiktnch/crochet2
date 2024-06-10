@@ -17,7 +17,7 @@ class IngredientImageFactory extends Factory
     public function definition()
     {
         return [
-            'ingredients_id' => 1,
+            'ingredient_id' => 1,
             'image_url' => $this->faker->url(),
         ];
     }

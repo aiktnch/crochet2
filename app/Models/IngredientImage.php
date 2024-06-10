@@ -16,4 +16,6 @@ class IngredientImage extends Model
      protected $fillable = [
         'ingredient_id',
         'image_url'
+        
+    ];
 }

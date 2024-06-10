@@ -16,4 +16,5 @@ class SummaryImage extends Model
      protected $fillable = [
         'summary_id',
         'image_url'
+    ];
 }
