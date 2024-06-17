@@ -16,13 +16,13 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
     public function summary() {
-        return $this->hasOne(Summary::class, 'post_id', 'id');
+        return $this->hasOne(Summary::class);
     }
     public function ingredient() {
-        return $this->belongsTo(Ingredient::class);
+        return $this->hasOne(Ingredient::class);
     }
     public function pattern() {
-        return $this->belongsTo(Pattern::class);
+        return $this->hasOne(Pattern::class);
     }
     public function comments() {
         return $this->hasMany(Comment::class);

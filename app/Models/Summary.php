@@ -10,7 +10,7 @@ class Summary extends Model
     use HasFactory;
     
     public function post() {
-        return $this->belongsTo(Post::class, 'post_id', 'id');
+        return $this->belongsTo(Post::class);
     }
     
     public function summary_images() {
