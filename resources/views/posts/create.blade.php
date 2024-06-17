@@ -5,15 +5,22 @@
         <title>Blog</title>
     </head>
     <body>
-        <h1>Blog Name</h1>
         <form action="/posts" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="title">
-                <h2>Title</h2>
+                <h2>タイトル</h2>
                 <input type="hidden" name="post[user_id]" value="{{ Auth::id() }}"/>
                 <input type="text" name="post[title]" placeholder="タイトル"/>
                 <input type="hidden" name="post[category_id]" value="1"/>
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
+            </div>
+            <div class="category">
+                <h2>カテゴリー</h2>
+                <select name="post[category_id]">
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="summary">
                 <h2>概要</h2>

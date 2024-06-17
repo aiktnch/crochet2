@@ -14,7 +14,7 @@ class Pattern extends Model
     }
     
     public function pattern_images() {
-        return $this->hasMany(Pattern_image::class);
+        return $this->hasMany(PatternImage::class);
     }
     
      protected $fillable = [

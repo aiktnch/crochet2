@@ -9,27 +9,34 @@
         {{ $post->title }}
     </h1>
     <div class="content">
-        <div class="content__post">
-            <h3>本文</h3>
+        <div class="summary-body">
+            <h3>概要</h3>
             <p>{{ $post->summary->body }}</p>    
         </div>
-        <div>
-            <img src="{{ $post->summary->summary_images->image_url }}" alt="画像が読み込めません。"/>
+        <div class="summary-images">
+            @foreach($post->summary->summary_images as $img)
+                <img src="{{ $img->image_url }}" alt="画像が読み込めません。"/>
+            @endforeach
         </div>
-        <div class="content__post">
-            <h3>本文</h3>
-            <p>{{ $post->body }}</p>    
+        <div class="ingredient-body">
+            <h3>材料</h3>
+            <p>{{ $post->ingredient->body }}</p>    
         </div>
-        <div>
-            <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
+        <div class="ingredient-images">
+            @foreach($post->ingredient->ingredient_images as $img)
+                <img src="{{ $img->image_url }}" alt="画像が読み込めません。"/>
+            @endforeach
         </div>
-        <div class="content__post">
-            <h3>本文</h3>
-            <p>{{ $post->body }}</p>    
+        <div class="pattern-body">
+            <h3>編み図</h3>
+            <p>{{ $post->pattern->body }}</p>    
         </div>
-        <div>
-            <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
+        <div class="pattern-images">
+            @foreach($post->pattern->pattern_images as $img)
+                <img src="{{ $img->image_url }}" alt="画像が読み込めません。"/>
+            @endforeach
         </div>
+        
     </div>
     <div class="footer">
         <a href="/posts">戻る</a>

@@ -14,7 +14,7 @@ class Ingredient extends Model
     }
     
     public function ingredient_images() {
-        return $this->hasMany(Ingredient_image::class);
+        return $this->hasMany(IngredientImage::class);
     }
     
      protected $fillable = [
