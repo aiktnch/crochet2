@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LikeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,4 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 require __DIR__.'/auth.php';
 
 Route::post('/posts', [PostController::class, 'store']);
+Route::post('/like', [LikeController::class, 'store']);

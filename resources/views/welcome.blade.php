@@ -10,9 +10,9 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body style="background-color: #D9E5FF;">
-        <h1 style="color: #4B0082">編み物アプリ</h1>
-        <h2 style="color: #4B0082">説明</h2>
-        <img src="{{ asset('images/662923_m.jpg') }}" alt="Example Image">
+        <h1 style="color: #4B0082">編み物サイト</h1>
+        <h2 style="color: #4B0082">編み物好きのためのサイトです♪</h2>
+        <img src="https://res.cloudinary.com/diekfnvoz/image/upload/v1719392504/662923_m_ijnp3h.jpg" alt="Example Image" style="height:350px;width:500px">
 
         <div class="login">
             <a href="/login">ログイン</a>
