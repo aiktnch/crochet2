@@ -7,6 +7,7 @@
     </x-slot>
     <h1 class="title" style="background-color: #D9E5FF;">
         {{ $post->title }}
+        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
     </h1>
     <div class="content" style="background-color: #D9E5FF;">
         <div class="flex">

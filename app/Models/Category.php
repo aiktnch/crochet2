@@ -9,8 +9,13 @@ class Category extends Model
 {
     use HasFactory;
     
-    public function categories() {
-        return $this->hasMany(Category::class);
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
+    
+    public function getByCategory(int $limit_count = 5)
+    {
+        return $this->posts()->with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
     
     protected $fillable = [
