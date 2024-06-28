@@ -14,6 +14,7 @@
                 <h2 class='title' style="color: black font-size: 10px">
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     <form action="/like" method="POST" class="mb-2 flex justify-end">
+                        <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
                         @csrf
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
                             <button type="submit" class="px-4 mb-2">
